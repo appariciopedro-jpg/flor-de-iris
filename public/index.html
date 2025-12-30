@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Flor de Íris | Sabonetes Artesanais</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-content">
+    <a href="index.html" class="logo-container" title="Voltar ao início">
+      <svg class="logo-svg" width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#6B46C1;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#A78BFA;stop-opacity:1" />
+          </linearGradient>
+          <linearGradient id="petalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#6B46C1;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+          </linearGradient>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        
+        <!-- Flor de Íris Estilizada -->
+        <g class="flower-icon">
+          <!-- Pétalas -->
+          <ellipse cx="20" cy="15" rx="8" ry="12" fill="url(#petalGradient)" transform="rotate(-30 20 30)" opacity="0.9"/>
+          <ellipse cx="35" cy="15" rx="8" ry="12" fill="url(#petalGradient)" transform="rotate(30 35 30)" opacity="0.9"/>
+          <ellipse cx="15" cy="30" rx="8" ry="12" fill="url(#petalGradient)" transform="rotate(-90 15 30)" opacity="0.9"/>
+          <ellipse cx="40" cy="30" rx="8" ry="12" fill="url(#petalGradient)" transform="rotate(90 40 30)" opacity="0.9"/>
+          <ellipse cx="20" cy="45" rx="8" ry="12" fill="url(#petalGradient)" transform="rotate(-150 20 30)" opacity="0.9"/>
+          <ellipse cx="35" cy="45" rx="8" ry="12" fill="url(#petalGradient)" transform="rotate(150 35 30)" opacity="0.9"/>
+          
+          <!-- Centro da flor -->
+          <circle cx="27.5" cy="30" r="10" fill="url(#logoGradient)" filter="url(#glow)"/>
+          <circle cx="27.5" cy="30" r="6" fill="#fff" opacity="0.3"/>
+        </g>
+        
+        <!-- Texto "Flor de Íris" -->
+        <text x="60" y="28" font-family="'Playfair Display', serif" font-size="20" font-weight="700" fill="url(#logoGradient)" filter="url(#glow)">Flor de</text>
+        <text x="60" y="48" font-family="'Playfair Display', serif" font-size="24" font-weight="800" fill="url(#logoGradient)" letter-spacing="1">ÍRIS</text>
+        
+        <!-- Detalhe decorativo -->
+        <path d="M 145 32 Q 150 28, 155 32 Q 150 36, 145 32" fill="url(#petalGradient)" opacity="0.6"/>
+        <circle cx="160" cy="32" r="2" fill="#FBBF24"/>
+      </svg>
+    </a>
+    <nav>
+      <a href="index.html" class="active">Início</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-background-effects">
+    <div class="floating-bubble bubble-1"></div>
+    <div class="floating-bubble bubble-2"></div>
+    <div class="floating-bubble bubble-3"></div>
+    <div class="floating-bubble bubble-4"></div>
+  </div>
+  <div class="hero-media">
+    <video src="https://cdn.coverr.co/videos/coverr-green-leaves-1440/1080p.mp4" autoplay muted loop playsinline></video>
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-text">
+    <span class="hero-badge animate-badge">
+      <span class="badge-dot"></span>
+      100% Natural • Artesanal • Premium
+    </span>
+    <h2 class="hero-title">
+      Sabonetes que <span class="gradient-text">transformam</span><br>
+      seu banho em <span class="gradient-text">bem-estar</span>
+    </h2>
+    <p class="hero-description">Ingredientes naturais, aromas exclusivos e cuidado especial para sua pele. Cada sabonete é uma obra de arte feita à mão com muito carinho.</p>
+    <div class="hero-actions">
+      <a href="produtos.html" class="btn btn-primary pulse-on-hover">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="21" r="1"/>
+          <circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        Explorar Produtos
+      </a>
+      <a href="#processo" class="btn btn-secondary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <polygon points="10 8 16 12 10 16 10 8"/>
+        </svg>
+        Ver Como Fazemos
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat stat-animated" data-target="500">
+        <strong class="counter">0</strong>
+        <span>Clientes Felizes</span>
+      </div>
+      <div class="stat stat-animated" data-target="100">
+        <strong class="counter">0</strong><strong>%</strong>
+        <span>Natural</span>
+      </div>
+      <div class="stat stat-animated">
+        <strong>4.9⭐</strong>
+        <span>Avaliação</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Badges de Confiança -->
+<section class="trust-badges">
+  <div class="badges-container">
+    <div class="trust-badge badge-verified">
+      <div class="badge-icon">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+          <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="12" cy="12" r="2" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="badge-content">
+        <h4>Site Verificado</h4>
+        <p>Certificado de Segurança</p>
+      </div>
+      <div class="badge-checkmark">✓</div>
+    </div>
+    
+    <div class="trust-badge badge-secure">
+      <div class="badge-icon">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+          <rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+          <path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="12" cy="16" r="1.5" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="badge-content">
+        <h4>100% Seguro</h4>
+        <p>Compra Protegida</p>
+      </div>
+      <div class="badge-checkmark">✓</div>
+    </div>
+    
+    <div class="trust-badge badge-natural">
+      <div class="badge-icon">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" stroke="currentColor" stroke-width="2"/>
+          <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="badge-content">
+        <h4>100% Natural</h4>
+        <p>Ingredientes Puros</p>
+      </div>
+      <div class="badge-checkmark">✓</div>
+    </div>
+    
+    <div class="trust-badge badge-quality">
+      <div class="badge-icon">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor" opacity="0.3"/>
+        </svg>
+      </div>
+      <div class="badge-content">
+        <h4>Qualidade Premium</h4>
+        <p>Selo de Excelência</p>
+      </div>
+      <div class="badge-checkmark">✓</div>
+    </div>
+  </div>
+</section>
+
+<!-- Seção de Processo de Fabricação -->
+<section class="processo-fabricacao" id="processo">
+  <h3 class="section-title">Como Criamos Nossos Sabonetes</h3>
+  <p class="section-subtitle">Um processo artesanal de amor e dedicação</p>
+  <div class="processo-timeline">
+    <div class="processo-step">
+      <div class="processo-icon">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+        </svg>
+      </div>
+      <div class="processo-number">01</div>
+      <h4>Seleção de Ingredientes</h4>
+      <p>Escolhemos cuidadosamente óleos naturais, manteigas vegetais e botânicos orgânicos</p>
+    </div>
+    <div class="processo-connector"></div>
+    <div class="processo-step">
+      <div class="processo-icon">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+        </svg>
+      </div>
+      <div class="processo-number">02</div>
+      <h4>Mistura Artesanal</h4>
+      <p>Combinamos os ingredientes com técnicas tradicionais, garantindo qualidade</p>
+    </div>
+    <div class="processo-connector"></div>
+    <div class="processo-step">
+      <div class="processo-icon">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+      </div>
+      <div class="processo-number">03</div>
+      <h4>Cura Natural</h4>
+      <p>Deixamos curar por 30-45 dias para desenvolver a textura perfeita</p>
+    </div>
+    <div class="processo-connector"></div>
+    <div class="processo-step">
+      <div class="processo-icon">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+      </div>
+      <div class="processo-number">04</div>
+      <h4>Embalagem com Amor</h4>
+      <p>Cada sabonete é embalado à mão com cuidado e carinho especial</p>
+    </div>
+  </div>
+</section>
+
+<section class="beneficios">
+  <h3 class="section-title">Por que escolher nossos sabonetes?</h3>
+  <p class="section-subtitle">Benefícios que fazem a diferença no seu dia a dia</p>
+  <div class="beneficios-grid">
+    <div class="beneficio-card hover-lift">
+      <div class="beneficio-icon-wrapper">
+        <div class="beneficio-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+          </svg>
+        </div>
+        <div class="icon-bg-circle"></div>
+      </div>
+      <h4>100% Natural</h4>
+      <p>Ingredientes selecionados da natureza, sem químicos agressivos ou parabenos</p>
+      <div class="card-shine"></div>
+    </div>
+    <div class="beneficio-card hover-lift">
+      <div class="beneficio-icon-wrapper">
+        <div class="beneficio-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+        <div class="icon-bg-circle"></div>
+      </div>
+      <h4>Feito com Amor</h4>
+      <p>Cada sabonete é produzido artesanalmente com muito carinho e atenção aos detalhes</p>
+      <div class="card-shine"></div>
+    </div>
+    <div class="beneficio-card hover-lift">
+      <div class="beneficio-icon-wrapper">
+        <div class="beneficio-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            <polyline points="7.5 4.21 12 6.81 16.5 4.21"/>
+            <polyline points="7.5 19.79 7.5 14.6 3 12"/>
+            <polyline points="21 12 16.5 14.6 16.5 19.79"/>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+            <line x1="12" y1="22.08" x2="12" y2="12"/>
+          </svg>
+        </div>
+        <div class="icon-bg-circle"></div>
+      </div>
+      <h4>Aromas Exclusivos</h4>
+      <p>Fragrâncias únicas que proporcionam uma experiência sensorial inesquecível</p>
+      <div class="card-shine"></div>
+    </div>
+    <div class="beneficio-card hover-lift">
+      <div class="beneficio-icon-wrapper">
+        <div class="beneficio-icon" style="background: linear-gradient(135deg, #fa709a, #fee140);">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+            <line x1="9" y1="9" x2="9.01" y2="9"/>
+            <line x1="15" y1="9" x2="15.01" y2="9"/>
+          </svg>
+        </div>
+        <div class="icon-bg-circle"></div>
+      </div>
+      <h4>Pele Saudável</h4>
+      <p>Fórmulas que hidratam e nutrem sua pele naturalmente, deixando-a radiante</p>
+      <div class="card-shine"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Nova Seção: Ingredientes Naturais -->
+<section class="ingredientes-naturais">
+  <div class="ingredientes-header">
+    <h3 class="section-title">Ingredientes que Amamos</h3>
+    <p class="section-subtitle">Natureza pura em cada sabonete</p>
+  </div>
+  <div class="ingredientes-showcase">
+    <div class="ingrediente-card float-animation" style="animation-delay: 0s;">
+      <div class="ingrediente-image">
+        <div class="image-circle" style="background: linear-gradient(135deg, #e0c3fc, #8ec5fc);"></div>
+      </div>
+      <h4>Lavanda</h4>
+      <p>Relaxante e calmante</p>
+    </div>
+    <div class="ingrediente-card float-animation" style="animation-delay: 0.2s;">
+      <div class="ingrediente-image">
+        <div class="image-circle" style="background: linear-gradient(135deg, #ffecd2, #fcb69f);"></div>
+      </div>
+      <h4>Mel Puro</h4>
+      <p>Hidratação intensa</p>
+    </div>
+    <div class="ingrediente-card float-animation" style="animation-delay: 0.4s;">
+      <div class="ingrediente-image">
+        <div class="image-circle" style="background: linear-gradient(135deg, #a1c4fd, #c2e9fb);"></div>
+      </div>
+      <h4>Aloe Vera</h4>
+      <p>Regeneração da pele</p>
+    </div>
+    <div class="ingrediente-card float-animation" style="animation-delay: 0.6s;">
+      <div class="ingrediente-image">
+        <div class="image-circle" style="background: linear-gradient(135deg, #fbc2eb, #a6c1ee);"></div>
+      </div>
+      <h4>Óleo de Coco</h4>
+      <p>Nutrição profunda</p>
+    </div>
+    <div class="ingrediente-card float-animation" style="animation-delay: 0.8s;">
+      <div class="ingrediente-image">
+        <div class="image-circle" style="background: linear-gradient(135deg, #f093fb, #f5576c);"></div>
+      </div>
+      <h4>Rosa Mosqueta</h4>
+      <p>Anti-idade natural</p>
+    </div>
+  </div>
+</section>
+
+<section class="produtos-destaque">
+  <h3 class="section-title">Produtos em Destaque</h3>
+  <p class="section-subtitle">Descubra nossos sabonetes mais amados pelos clientes</p>
+  <div class="cards produtos-showcase" id="produtos-destaque"></div>
+  <div class="cta-ver-todos">
+    <a href="produtos.html" class="btn-ver-todos">
+      Ver todos os produtos 
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<section class="depoimentos">
+  <h3>O que nossos clientes dizem</h3>
+  <div class="depoimentos-grid">
+    <div class="depoimento-card">
+      <div class="depoimento-header">
+        <div class="avatar">M</div>
+        <div>
+          <h4>Maria Silva</h4>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+      <p>"Simplesmente incrível! Os sabonetes são maravilhosos, cheirosos e deixam minha pele muito macia. Recomendo!"</p>
+    </div>
+    <div class="depoimento-card">
+      <div class="depoimento-header">
+        <div class="avatar">J</div>
+        <div>
+          <h4>João Santos</h4>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+      <p>"Produtos de alta qualidade! A entrega foi rápida e o atendimento impecável. Já comprei várias vezes."</p>
+    </div>
+    <div class="depoimento-card">
+      <div class="depoimento-header">
+        <div class="avatar">A</div>
+        <div>
+          <h4>Ana Oliveira</h4>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+      <p>"Minha pele sensível amou! São realmente naturais e não causam irritação. Viraram meus favoritos!"</p>
+    </div>
+  </div>
+</section>
+
+<section class="sobre" id="sobre">
+  <div class="sobre-content">
+    <div class="sobre-text">
+      <h3>Nossa História</h3>
+      <p>A <strong>Flor de Íris</strong> nasceu do amor pela natureza e pelo cuidado com a pele. Criamos sabonetes artesanais premium com ingredientes naturais cuidadosamente selecionados.</p>
+      <p>Cada produto é feito à mão, com receitas exclusivas que combinam botânicos, óleos essenciais e muito carinho. Nossa missão é transformar o cuidado diário em um ritual de bem-estar e amor próprio.</p>
+      <div class="sobre-features">
+        <div class="feature-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          <span>Ingredientes 100% naturais</span>
+        </div>
+        <div class="feature-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          <span>Livre de crueldade animal</span>
+        </div>
+        <div class="feature-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          <span>Embalagens sustentáveis</span>
+        </div>
+      </div>
+    </div>
+    <div class="sobre-image">
+      <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&h=400&fit=crop&auto=format" alt="Sabonetes artesanais naturais">
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="contato">
+  <div class="cta-background-effects">
+    <div class="cta-particle cta-particle-1"></div>
+    <div class="cta-particle cta-particle-2"></div>
+    <div class="cta-particle cta-particle-3"></div>
+    <div class="cta-particle cta-particle-4"></div>
+  </div>
+  <div class="cta-content">
+    <div class="cta-badge">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+      </svg>
+      <span>Experimente Agora</span>
+    </div>
+    <h3>Transforme Seu Banho em Um Ritual de Beleza</h3>
+    <p>Junte-se a mais de 500 clientes satisfeitos e descubra o poder dos ingredientes naturais</p>
+    
+    <div class="cta-newsletter">
+      <h4>📬 Receba Ofertas Exclusivas</h4>
+      <p class="newsletter-subtitle">Cadastre seu e-mail e ganhe <strong>10% OFF</strong> na primeira compra</p>
+      <form class="newsletter-form" onsubmit="return false;">
+        <input type="email" placeholder="Seu melhor e-mail" required>
+        <button type="submit" class="btn-newsletter">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+          Quero Desconto
+        </button>
+      </form>
+    </div>
+    
+    <div class="cta-buttons">
+      <a href="produtos.html" class="btn-cta btn-cta-primary">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="21" r="1"/>
+          <circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        Ver Produtos
+      </a>
+      <a href="https://api.whatsapp.com/send/?phone=554498642644" class="btn-cta btn-cta-secondary" target="_blank" rel="noopener">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        Fale no WhatsApp
+      </a>
+    </div>
+    
+    <div class="cta-features">
+      <div class="cta-feature">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+        <span>500+ Clientes</span>
+      </div>
+      <div class="cta-feature">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+        <span>4.9 Estrelas</span>
+      </div>
+      <div class="cta-feature">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+        </svg>
+        <span>100% Natural</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-content">
+      <div class="footer-section footer-brand">
+        <div class="footer-logo">
+          <svg width="50" height="50" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="footerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#6B46C1;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <circle cx="100" cy="70" r="25" fill="url(#footerGradient)" opacity="0.8"/>
+            <circle cx="80" cy="95" r="20" fill="url(#footerGradient)" opacity="0.6"/>
+            <circle cx="120" cy="95" r="20" fill="url(#footerGradient)" opacity="0.6"/>
+            <circle cx="70" cy="120" r="15" fill="url(#footerGradient)" opacity="0.5"/>
+            <circle cx="100" cy="125" r="18" fill="url(#footerGradient)" opacity="0.5"/>
+            <circle cx="130" cy="120" r="15" fill="url(#footerGradient)" opacity="0.5"/>
+            <path d="M 100 130 Q 100 170 100 180" stroke="url(#footerGradient)" stroke-width="4" fill="none"/>
+          </svg>
+          <span>Flor de Íris</span>
+        </div>
+        <p>Sabonetes artesanais premium feitos com ingredientes 100% naturais. Transforme seu banho em um momento especial de autocuidado.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram" class="social-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook" class="social-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="https://api.whatsapp.com/send/?phone=554498642644" target="_blank" aria-label="WhatsApp" class="social-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Navegação</h4>
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#processo">Processo</a>
+        <a href="painel.html">Painel Admin</a>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Informações</h4>
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Termos de Uso</a>
+        <a href="#">Trocas e Devoluções</a>
+        <a href="#">Envio e Entrega</a>
+        <a href="#">Perguntas Frequentes</a>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Contato</h4>
+        <div class="footer-contact">
+          <div class="contact-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span>Maringá, PR - Brasil</span>
+          </div>
+          <div class="contact-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span>(44) 9864-2644</span>
+          </div>
+          <div class="contact-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <span>contato@flordeiris.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-payment">
+    <p>Aceitamos:</p>
+    <div class="payment-methods">
+      <span class="payment-badge">💳 Cartão</span>
+      <span class="payment-badge">💵 Pix</span>
+      <span class="payment-badge">💸 Boleto</span>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>© 2025 Flor de Íris - Sabonetes Artesanais. Todos os direitos reservados.</p>
+    <p class="footer-dev">Desenvolvido com 💖 e muito carinho</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/suporte.js"></script>
+</body>
+</html>
