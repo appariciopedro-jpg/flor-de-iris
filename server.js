@@ -91,9 +91,32 @@ app.use((req, res, next) => {
   next();
 });
 
+// DEBUG: Listar estrutura de diretórios
+console.log("\n🔍 DEBUG - Estrutura de diretórios:");
+console.log(`📁 __dirname: ${__dirname}`);
+console.log(`📁 process.cwd(): ${process.cwd()}`);
+
+// Listar arquivos no diretório raiz
+try {
+  const rootFiles = fs.readdirSync(__dirname);
+  console.log(`📂 Arquivos em __dirname:`, rootFiles);
+  
+  // Verificar se pasta public existe
+  const publicPath = path.join(__dirname, "public");
+  if (fs.existsSync(publicPath)) {
+    console.log(`✅ Pasta public encontrada em: ${publicPath}`);
+    const publicFiles = fs.readdirSync(publicPath);
+    console.log(`📂 Arquivos em public:`, publicFiles);
+  } else {
+    console.log(`❌ Pasta public NÃO encontrada em: ${publicPath}`);
+  }
+} catch (err) {
+  console.error("❌ Erro ao listar diretórios:", err.message);
+}
+console.log("\n");
+
 // SERVIR ARQUIVOS ESTÁTICOS com options para vídeo
 const publicPath = path.join(__dirname, "public");
-console.log(`📁 Servindo arquivos de: ${publicPath}`);
 
 app.use(express.static(publicPath, {
   setHeaders: (res, filePath) => {
@@ -103,17 +126,9 @@ app.use(express.static(publicPath, {
   }
 }));
 
-// Rota fallback para index.html
+// Rota raiz
 app.get("/", (req, res) => {
-  const indexPath = path.join(__dirname, "public", "index.html");
-  console.log(`📄 Servindo index.html de: ${indexPath}`);
-  
-  if (!fs.existsSync(indexPath)) {
-    console.error(`❌ index.html não encontrado em: ${indexPath}`);
-    return res.status(500).send('Erro ao carregar a página inicial');
-  }
-  
-  res.sendFile(indexPath);
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 // ROTA DE STREAM DE VÍDEO COM SUPORTE A RANGE (evita RangeNotSatisfiable)
