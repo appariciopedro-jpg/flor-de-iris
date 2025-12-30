@@ -92,13 +92,29 @@ app.use((req, res, next) => {
 });
 
 // SERVIR ARQUIVOS ESTÁTICOS com options para vídeo
-app.use(express.static(path.join(__dirname, "public"), {
+const publicPath = path.join(__dirname, "public");
+console.log(`📁 Servindo arquivos de: ${publicPath}`);
+
+app.use(express.static(publicPath, {
   setHeaders: (res, filePath) => {
     if (filePath.endsWith('.mp4')) {
       res.setHeader('Accept-Ranges', 'bytes');
     }
   }
 }));
+
+// Rota fallback para index.html
+app.get("/", (req, res) => {
+  const indexPath = path.join(__dirname, "public", "index.html");
+  console.log(`📄 Servindo index.html de: ${indexPath}`);
+  
+  if (!fs.existsSync(indexPath)) {
+    console.error(`❌ index.html não encontrado em: ${indexPath}`);
+    return res.status(500).send('Erro ao carregar a página inicial');
+  }
+  
+  res.sendFile(indexPath);
+});
 
 // ROTA DE STREAM DE VÍDEO COM SUPORTE A RANGE (evita RangeNotSatisfiable)
 app.get("/videos/:file", (req, res) => {
